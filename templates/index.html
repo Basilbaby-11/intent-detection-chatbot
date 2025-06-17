@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Intenty</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="chat-container">
+    <h1> Intenty </h1>
+    <div class="chat-box" id="chat-box"></div>
+    <form id="chat-form">
+      <input type="text" id="message" placeholder="Type a message..." autocomplete="off" required />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('chat-form');
+    const messageInput = document.getElementById('message');
+    const chatBox = document.getElementById('chat-box');
+
+    form.onsubmit = async (e) => {
+      e.preventDefault();
+      const userMessage = messageInput.value.trim();
+      if (!userMessage) return;
+
+      // Display user message
+      chatBox.innerHTML += `<div class='user-msg'><strong>You:</strong> ${userMessage}</div>`;
+      chatBox.scrollTop = chatBox.scrollHeight;
+      messageInput.value = ''; // Clear immediately
+
+      try {
+        const res = await fetch('/get', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: userMessage })
+        });
+        const data = await res.json();
+
+        // Display bot reply
+        chatBox.innerHTML += `<div class='bot-msg'><strong>Bot:</strong> ${data.reply}</div>`;
+        chatBox.scrollTop = chatBox.scrollHeight;
+      } catch (err) {
+        chatBox.innerHTML += `<div class='bot-msg'><strong>Bot:</strong> Sorry, something went wrong.</div>`;
+        chatBox.scrollTop = chatBox.scrollHeight;
+      }
+    };
+  </script>
+</body>
+</html>

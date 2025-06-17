@@ -1,0 +1,58 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "What's up", "Good morning", "Good evening"],
+      "responses": ["Hello!", "Hi there!", "Hey! How can I assist you?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you", "Goodbye", "Catch you later"],
+      "responses": ["Goodbye!", "See you later!", "Take care!"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "I appreciate it"],
+      "responses": ["You're welcome!", "Glad I could help!", "Anytime!"]
+    },
+    {
+      "tag": "help",
+      "patterns": ["I need help", "Can you help me?", "Support", "Help me with something"],
+      "responses": ["Of course! What do you need help with?", "I’m here to help."]
+    },
+    {
+      "tag": "name",
+      "patterns": ["What's your name?", "Who are you?", "Tell me your name"],
+      "responses": ["I'm intenty, your simple AI assistant!", "You can call me Chatter!"]
+    },
+    {
+      "tag": "mood",
+      "patterns": ["How are you?", "How's it going?", "Are you okay?"],
+      "responses": ["I'm doing great! Thanks for asking.", "Feeling helpful as always!"]
+    },
+    {
+      "tag": "age",
+      "patterns": ["How old are you?", "When were you created?"],
+      "responses": ["I was created recently to help users like you!", "Age doesn't apply to me, but I'm always up-to-date!"]
+    },
+    {
+      "tag": "creator",
+      "patterns": ["Who made you?", "Who created you?", "Who built you?"],
+      "responses": ["I was built by a developer who loves AI and Python!", "Someone passionate about code and learning made me!"]
+    },
+    {
+      "tag": "joke",
+      "patterns": ["Tell me a joke", "Make me laugh", "Say something funny"],
+      "responses": [
+        "Why don’t scientists trust atoms? Because they make up everything!",
+        "What did the computer do at lunchtime? Had a byte!",
+        "Why was the math book sad? Because it had too many problems."
+      ]
+    },
+    {
+      "tag": "time",
+      "patterns": ["What time is it?", "Tell me the time", "Current time"],
+      "responses": ["Sorry, I can't tell the time right now, but you can check your device!"]
+    }
+  ]
+}
