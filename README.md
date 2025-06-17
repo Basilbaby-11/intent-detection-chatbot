@@ -1,32 +1,42 @@
+# 🤖 Intent Detection Chatbot
+
+This is a simple web-based chatbot that uses machine learning to detect user intent and respond accordingly. Built using Flask, HTML/CSS, and Python libraries like scikit-learn and NLTK.
+
+---
+
+## 🚀 Features
+
+- Intent detection based on user input
+- Predefined intents loaded from a JSON file
+- Trained using basic ML (TF-IDF + Logistic Regression)
+- Web interface with clean chat UI
+- Responses are generated based on intent matching
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: Python (Flask)
+- **ML Libraries**: scikit-learn, NLTK, pickle
+- **Version Control**: Git + GitHub
+
+---
+
 ## 📁 Project Structure
 
-```
 intent-detection-chatbot/
 ├── static/
-│   └── style.css              # Custom styles for the chat UI
+│ └── style.css
 ├── templates/
-│   └── index.html             # Frontend interface
-├── intents.json               # Intents, patterns, and responses
-├── chatbot_model.pkl          # Saved ML model and vectorizer
-├── chatbot.py                 # Core logic for intent detection
-├── train.py                   # Script to train the model
-├── app.py                     # Flask app to serve chatbot
-├── requirements.txt           # List of required Python packages
-└── README.md                  # Documentation file
-```
-
----
-
-## 🔍 How It Works
-
-1. `intents.json` contains patterns and their corresponding tags.
-2. `train.py` loads the intents, vectorizes the text, and trains a Logistic Regression model.
-3. The model and vectorizer are saved to `chatbot_model.pkl`.
-4. `chatbot.py` contains the prediction logic that uses the model.
-5. `app.py` sets up a Flask web server and routes user input to the model.
-6. The user interacts with the chatbot through a web UI built in `index.html`.
-
----
+│ └── index.html
+├── intents.json
+├── chatbot_model.pkl
+├── chatbot.py # Bot logic
+├── train.py # Model training
+├── app.py # Flask web app
+├── requirements.txt
+└── README.md
 
 ## 🚀 Deployment Steps
 
